@@ -28,6 +28,24 @@ Para ejecutar el servidor para frontend, deberá ejecutar el siguiente comando e
 ---
 
 ## Change Log
-#### 10 de Julio 2022
-+ (Actual) 
-**Commit Inicial** - _Version 0.0.0_ : Subida inicial de los archivos al repositorio.
+
+### 11 de Julio 2022
+#### _Versión 0.0.0a1_ - (Actual):
+##### General
++ Creación de la carpeta **databases/** que contendrá  los script necesarios para crear la base de datos.
++ Cambio en la estrutura de la sección **Change Log**.
+##### Backend
++ Creación de los controladores.
++ Creación de la conexión a la base de datos.
++ Creación de los modelos necesarios para manejar los datos para el catálogo de plantas.
++ Creación de los controladores de para consultar las plantas en la base de datos.
+##### Databases
++ Creación de la base de datos Plantae.
++ Creación de la tabla Plantas.
+
+---
+
+## 10 de Julio 2022
+#### _Versión 0.0.0_
+##### General
+Subida inicial de los archivos al repositorio.

@@ -17,3 +17,12 @@ Puedes instalar todas estas dependencias ejecutando el siguiente comando: `npm i
 Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `npx nodemon app`
 
 **_Nota:_** Debes haber inicializado un proyecto en node para ejecutar todo, puedes instalarlo con `npm init -y`
+
+## Change Log
+### 11 de Julio 2022
+
+#### _Versión 0.0.0a1_ - (Actual):
++ Creación de los controladores.
++ Creación de la conexión a la base de datos.
++ Creación de los modelos necesarios para manejar los datos para el catálogo de plantas.
++ Creación de los controladores de para consultar las plantas en la base de datos.

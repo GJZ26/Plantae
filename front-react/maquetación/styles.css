@@ -1,0 +1,47 @@
+body {
+    margin : 0px;
+    background-color: aliceblue;
+}
+
+.button-add {
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    transition-duration: 0.4;
+}
+
+.button-add:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.page-nav {
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+
+.page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 1px solid rgb(46, 211, 8);
+}
+
+.product-container {
+    margin-left: 40px;
+    padding: 2px 16px;
+}
+
+.product-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product-container img {
+    width: 298px;
+}

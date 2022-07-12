@@ -1,0 +1,86 @@
+.menu {
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 8%;
+    height: 7%;
+
+    position: fixed;
+
+    transition: .4s all;
+
+    z-index: 1;
+}
+
+.menu ul{
+    padding: 0px;
+    text-align: center;
+}
+
+.menu li{
+    transition: .3s all;
+}
+
+.menu a{
+    text-decoration: none;
+    list-style: none;
+
+    transition: .3s all;
+    font-size: 0px;
+    padding: 0px;
+}
+
+.menu h2{
+    text-align: center;
+    color: white;
+    padding: 7px;
+    padding-bottom: 7px;
+
+    font-size: 0px;
+}
+
+.menu img{
+    padding-top: 30px;
+    padding-left: 10px;
+    width: 50px;
+}
+
+.menu:hover{
+    width: 15%;
+    height: 100%;
+
+    background-color: rgba(5,33,51, 0.98);
+}
+
+.menu:hover h2{
+    padding:15px;
+    font-size: 35px;
+}
+
+.menu:hover a{
+
+font-size: 20px;
+color: white;
+
+display: block;
+padding:20px;
+}
+
+.menu:hover img{
+    height:2px;
+}
+
+.menu:hover li{
+    border-top: 1px solid black;
+
+    width: 100%;
+}
+
+.menu:hover ul:last-of-type{
+    border-bottom: 1px solid black;
+}
+
+.menu:hover a:hover{
+    font-size: 25px;
+    padding: 30px 0px;
+    background-color: rgba(22, 78, 112, 0.98);
+}

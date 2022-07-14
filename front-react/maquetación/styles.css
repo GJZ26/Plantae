@@ -1,40 +1,74 @@
 body {
-    margin : 0px;
-    background-color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 0;
 }
 
-.button-add {
-    font-size: 16px;
-    text-align: center;
-    border-radius: 8px;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
-    transition-duration: 0.4;
+h1 {
+    font-size:2rem;
+    line-height: 1.3em;
 }
 
-.button-add:hover {
-    background-color: #4CAF50;
+p {
+    margin-bottom: 1.6em;
+}
+
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    background: rgb(1, 103, 26);
     color: white;
+    padding: 1.8rem 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 
-
-.page-nav {
-    background-color: aquamarine;
-    border: 1px solid black;
+.main {
+    padding-top: 8rem;
 }
 
+.header a {
+    color: white;
+    text-decoration: none;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    letter-spacing: 5px;
+    font-size: 1.3em;
+    margin-left: 32%;
+}
+
+.footer {
+background: #000000;
+font: Georgia;
+color: rgb(255, 255, 255);
+padding: 1rem 0;
+text-align: center;
+margin-top: 6rem;    
+}        
 
 .page-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px solid rgb(46, 211, 8);
 }
 
 .product-container {
-    margin-left: 40px;
+    margin-left: 165px;
     padding: 2px 16px;
 }
 
@@ -45,3 +79,40 @@ body {
 .product-container img {
     width: 298px;
 }
+
+.button-add {
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 50%;
+    transition-duration: 0.4;
+}
+
+.button-add:hover {
+    background-color: #215823;
+    color: white;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li{
+    display:inline-block;
+}
+
+    .navigation ul li a{
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+        .navigation ul li a:hover{
+            background: rgb(0, 75, 19);
+        }

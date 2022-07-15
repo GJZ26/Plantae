@@ -1,11 +1,18 @@
-// Importamos Sequelize.
-import { Sequelize } from 'sequelize';
-
-// Creamos la conexión a la base de datos.
-const db = new Sequelize ('Plantae','root','',{
+/* Prueba de usar MySql en vez de Sequilize */
+import mysql from 'mysql';
+const db = mysql.createConnection({
     host:'localhost',
-    dialect:'mysql'
+    user:'root',
+    password:'',
+    database:'Plantae'
 })
+
+db.connect(
+    function(err){
+        if(err) throw err
+        console.log('Conexión exitosa')
+    }
+)
 
 // Exportamos la conexion
 export default db;

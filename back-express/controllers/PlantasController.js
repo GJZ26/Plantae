@@ -1,6 +1,4 @@
-// Importamos el modelo para las plantas
-import PlantaModel from '../models/PlantasModel.js'
-import PlantasModel from '../models/PlantasModel.js'
+import db from "../database/conexion.js"
 
 /*
   ____________________________________
@@ -13,8 +11,10 @@ import PlantasModel from '../models/PlantasModel.js'
 export const getAllPlant = async (req, res) => {
     try {
 
-        const planta = await PlantasModel.findAll() // Esperamos a que Sequelize nos devuelva todos los registros
-        res.json(planta) // Lo regresamos como JSON
+        db.query('SELECT * FROM plantas', function (err, rows) {
+            if (err) throw err
+            res.send(rows)
+        })
 
     } catch (error) {
 
@@ -27,11 +27,10 @@ export const getAllPlant = async (req, res) => {
 export const getPlantbyID = async (req, res) => {
     try {
 
-        const planta = await PlantasModel.findAll({
-            where: { id: req.params.id } // Sólo recuperaremos los que coincidan con el id proporcionado por la petición
+        db.query('SELECT * FROM plantas WHERE id=' + req.params.id, (err, rows) => {
+            if (err) throw err
+            res.json(rows[0])
         })
-
-        res.json(planta[0])
 
     } catch (error) {
         res.json({ message: error.message })

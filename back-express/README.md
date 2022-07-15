@@ -4,15 +4,14 @@ Esta carpeta tiene el fin de establecer las conexiones a la base de datos y prop
 ## Funcionamiento
 Por el momento no hay nada.
 ## Dependencias 
-| Nombre    | Versión |
-| :-------- | :-----: |
-| Express   | 4.18.1  |
-| Cors      |  2.8.5  |
-| MySQL2    |  2.3.3  |
-| Nodemon   | 2.0.19  |
-| Sequelize | 6.21.2  |
+| Nombre  | Versión |
+| :------ | :-----: |
+| Express | 4.18.1  |
+| Cors    |  2.8.5  |
+| MySQL   | 2.18.1  |
+| Nodemon | 2.0.19  |
 
-Puedes instalar todas estas dependencias ejecutando el siguiente comando: `npm install express cors mysql2 sequelize`
+Puedes instalar todas estas dependencias ejecutando el siguiente comando: `npm install express cors mysql`
 
 Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `npx nodemon app`
 
@@ -21,7 +20,13 @@ Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `np
 ## Change Log
 ### 11 de Julio 2022
 
-#### _Versión 0.0.0a1_ - (Actual):
+#### _Versión 0.0.0a2_ (Actual):
++ Adición de la carpeta **/maquetación** en el directorio **/front-react**
++ Eliminación de las dependencias de Sequelize y MySQL2.
++ Adición de la dependencia de MySQL.
++ Re-adaptación de los controladores para la sintaxis de MySQL.
+
+#### _Versión 0.0.0a1_:
 + Creación de los controladores.
 + Creación de la conexión a la base de datos.
 + Creación de los modelos necesarios para manejar los datos para el catálogo de plantas.

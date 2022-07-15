@@ -1,5 +1,5 @@
 <h1>Plantae</h1>
-Un página para la venta de platas en línea escrito en React + Express + MongoDB.
+Un página para la venta de platas en línea escrito en React + Express + MySQL.
 
 ---
 ## Instalación

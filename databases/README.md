@@ -11,14 +11,22 @@ Puedes eliminar la base de datos escribiendo `DROP DATABASE Plantae;` desde tu W
 ## Estructura
 Conoce la estructura de las distintas tablas de proyecto
 #### Planta
-| id                   | nombre            | nombre_cientifico | descripcion | tipo              | img_ruta          | stock        |
-| -------------------- | ----------------- | ----------------- | ----------- | ----------------- | ----------------- | ------------ |
-| **INT** - PrimaryKey | **VARCHAR** (100) | **VARCHAR** (150) | **TEXT**    | **VARCHAR** (100) | **VARCHAR** (100) | **INT** (11) |
+| id                   | nombre            | nombre_cientifico | descripcion | tipo              | img_ruta          | stock        | precio       |
+| -------------------- | ----------------- | ----------------- | ----------- | ----------------- | ----------------- | ------------ | ------------ |
+| **INT** - PrimaryKey | **VARCHAR** (100) | **VARCHAR** (150) | **TEXT**    | **VARCHAR** (100) | **VARCHAR** (100) | **INT** (11) | **INT** (11) |
 
 ---
-## Change Log
-### 11 de Julio 2022
 
-#### _Versión 0.0.0a1_ - (Actual):
+## Change Log
+
+### 15 de Julio 2022
+#### _Versión 0.0.0a3_:
++ Eliminación de las columnas **createdAt** y **updateAt**.
++ Creación de la columna **precio**
+
+---
+
+### 11 de Julio 2022
+#### _Versión 0.0.0a1_:
 + Creación de la base de datos Plantae.
 + Creación de la tabla Plantas.

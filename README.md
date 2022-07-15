@@ -28,10 +28,23 @@ Para ejecutar el servidor para frontend, deberá ejecutar el siguiente comando e
 
 ## Change Log
 
-## 14 de Julio 2022
-#### _Versión 0.0.0a2_ (Actual):
+### 15 de Julio 2022
+#### _Versión 0.0.0a3_(Actual):
+##### General
++ Correción de los README.
 ##### Backend
-+ Adición de la carpeta **/maquetación** en el directorio **/front-react**
++ Depuración de los controladores de **Planta**.
+##### Database
++ Eliminación de las columnas **createdAt** y **updateAt**.
++ Creación de la columna **precio**
+
+---
+
+### 14 de Julio 2022
+#### _Versión 0.0.0a2_:
+##### Frontend
++ Adición de la carpeta **/maquetación** en el directorio **/front-react**.
+##### Backend
 + Eliminación de las dependencias de Sequelize y MySQL2.
 + Adición de la dependencia de MySQL.
 + Re-adaptación de los controladores para la sintaxis de MySQL.

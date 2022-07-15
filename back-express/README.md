@@ -18,9 +18,16 @@ Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `np
 **_Nota:_** Debes haber inicializado un proyecto en node para ejecutar todo, puedes instalarlo con `npm init -y`
 
 ## Change Log
+
+### 15 de Julio 2022
+#### _Versión 0.0.0a3_:
++ Depuración de los controladores de **Planta**.
+
+---
+
 ### 11 de Julio 2022
 
-#### _Versión 0.0.0a2_ (Actual):
+#### _Versión 0.0.0a2_:
 + Adición de la carpeta **/maquetación** en el directorio **/front-react**
 + Eliminación de las dependencias de Sequelize y MySQL2.
 + Adición de la dependencia de MySQL.

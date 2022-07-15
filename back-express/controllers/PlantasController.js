@@ -9,32 +9,22 @@ import db from "../database/conexion.js"
 
 // Mostrar todas las plantas
 export const getAllPlant = async (req, res) => {
-    try {
 
-        db.query('SELECT * FROM plantas', function (err, rows) {
-            if (err) throw err
-            res.send(rows)
-        })
+    db.query('SELECT * FROM plantas', function (err, rows) {
+        if (err) throw res.json({ message: err.message })
+        res.json(rows)
+    })
 
-    } catch (error) {
-
-        res.json({ message: error.message }) // Mostramos mensaje de error
-
-    }
 }
 
 // Mostrar planta específica por ID
 export const getPlantbyID = async (req, res) => {
-    try {
 
-        db.query('SELECT * FROM plantas WHERE id=' + req.params.id, (err, rows) => {
-            if (err) throw err
-            res.json(rows[0])
-        })
+    db.query('SELECT * FROM plantas WHERE id=' + req.params.id, (err, rows) => {
+        if (err) throw res.json({ message: err.message })
+        res.send(rows[0])
+    })
 
-    } catch (error) {
-        res.json({ message: error.message })
-    }
 }
 
 /*

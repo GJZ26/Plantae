@@ -13,3 +13,12 @@ Por el momento no hay nada.
 Puedes instalar todas estas dependencias ejecutando el siguiente comando: `npm install axios react-router-dom`.
 
 Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `npm start`.
+
+## Change Log
+
+---
+
+### 14 de Julio 2022
+#### _Versión 0.0.0a2_:
+##### Frontend
++ Adición de la carpeta **/maquetación** en el directorio **/front-react**.

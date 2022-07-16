@@ -14,11 +14,18 @@ Puedes instalar todas estas dependencias ejecutando el siguiente comando: `npm i
 
 Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `npm start`.
 
+---
+
 ## Change Log
+
+### 16 de Julio 2022
+#### _Versión 0.0.0a4_:
++ Creación del directorio **/component** dónde estarán guardados los componentes de react para la visualización del usuario.
++ Adición de los CDN de **bootstrap** en el archivo **index.html** para hacer diseños de pruebas.
++ Depuración de comentarios innecesarios del archivo **App.js**.
 
 ---
 
 ### 14 de Julio 2022
 #### _Versión 0.0.0a2_:
-##### Frontend
 + Adición de la carpeta **/maquetación** en el directorio **/front-react**.

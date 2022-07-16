@@ -17,6 +17,8 @@ Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `np
 
 **_Nota:_** Debes haber inicializado un proyecto en node para ejecutar todo, puedes instalarlo con `npm init -y`
 
+---
+
 ## Change Log
 
 ### 15 de Julio 2022
@@ -33,6 +35,9 @@ Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `np
 + Adición de la dependencia de MySQL.
 + Re-adaptación de los controladores para la sintaxis de MySQL.
 
+---
+
+### 10 de Julio 2022
 #### _Versión 0.0.0a1_:
 + Creación de los controladores.
 + Creación de la conexión a la base de datos.

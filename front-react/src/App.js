@@ -1,15 +1,15 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import MostrarPlantas from './component/MenuPlantas.jsx';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Esto será una bonita página de plantas
-        </p>
-      </header>
+      <BrowserRouter /* Indispensable para el redireccionamiento */ >
+        <Routes>
+          <Route path='/' element={< MostrarPlantas />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

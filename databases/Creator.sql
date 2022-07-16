@@ -5,7 +5,7 @@
  
  Nota: Recuerda activar el módulo de SQL antes de ejecutar el script.
  
- Versión del Servidor: Server version: 10.4.24-MariaDB
+ Versión del Servidor: 10.4.24-MariaDB
  
 **/
 
@@ -167,5 +167,5 @@ ALTER TABLE
     `plantas`
 MODIFY
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 1
+    AUTO_INCREMENT = 13
 ;

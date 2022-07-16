@@ -28,8 +28,19 @@ Para ejecutar el servidor para frontend, deberá ejecutar el siguiente comando e
 
 ## Change Log
 
+### 16 de Julio
+#### _Versión 0.0.0a4_(Actual):
+##### Frontend
++ Creación del directorio **/component** dónde estarán guardados los componentes de react para la visualización del usuario.
++ Adición de los CDN de **bootstrap** en el archivo **index.html** para hacer diseños de pruebas.
++ Depuración de comentarios innecesarios del archivo **App.js**.
+##### Database
++ Correción de la propiedad **auto incremental** de la columna id.
+
+---
+
 ### 15 de Julio 2022
-#### _Versión 0.0.0a3_(Actual):
+#### _Versión 0.0.0a3_:
 ##### General
 + Correción de los README.
 ##### Backend
@@ -68,6 +79,6 @@ Para ejecutar el servidor para frontend, deberá ejecutar el siguiente comando e
 ---
 
 ## 10 de Julio 2022
-#### _Versión 0.0.0_
+#### _Versión 0.0.0_:
 ##### General
 Subida inicial de los archivos al repositorio.

@@ -18,6 +18,11 @@ Conoce la estructura de las distintas tablas de proyecto
 ---
 
 ## Change Log
+### 16 de Julio 2022
+#### _Versión 0.0.0a4_:
++ Correción de la propiedad **auto incremental** de la columna id.
+
+---
 
 ### 15 de Julio 2022
 #### _Versión 0.0.0a3_:

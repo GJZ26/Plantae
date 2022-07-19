@@ -2,6 +2,9 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
+// Importamos hoja de estilo para el componente
+import '../static/card.css'
+
 // Declaramos constantes
 const URI = 'http://localhost:8000/plantae/catalogo/'
 
@@ -19,21 +22,26 @@ const MostrarPlantas = () => {
         const res = await axios.get(URI).catch(console.error("No se ha podido establecer conexion con el servidor"))
         setPlanta(res.data)
     }
-
+    // Esta parte genera las cartas para el menú
     return (
-        <div>
+        <div className="Cardcontainer">
             {/* Por cada elemento del retorno de la consulta, crea una card independiente */}
             {plants.map((plant) => ( // Nota: Al estar adentro de un elemento jsx, las funciones flechas se escribem () => () en vez de ()=>{}
-                <div key={plant.id} className="card text-center ">
-                    <div className="card-body">
-                        <h5 className="card-title">{plant.nombre}</h5>
-                        <p className="card-text">
+
+                <div key={plant.id} style={{ backgroundImage: "url(http://localhost:8000/" + plant.img_ruta }} className="cardPlant">
+                    <div className="filterContainer">
+                        <h5 className="cardTitle">{plant.nombre}</h5>
+                        <p className="nombreCientifico">{plant.nombre_cientifico}</p>
+                        <p className="cardText">
                             {plant.descripcion}
                         </p>
-
-                        <button type="button" className="btn btn-primary">Button</button>
+                        <p className="price"><strong className="price">Precio: </strong><span className="price">${plant.precio}.00 MXN</span></p>
+                        <p className="stock"><strong className="stock">Disponible: </strong><span className="stock">{plant.stock}</span></p>
+                        <button type="button" className="view btn">Ver</button>
+                        <button type="button" className="car btn">Car</button>
                     </div>
                 </div>
+
             ))}
         </div>
     );

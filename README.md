@@ -13,6 +13,7 @@ Esta página consta de dos proyectos que servirá de backend y frontend. Mira en
 + **Cors** - _Versión 2.8.5 o superior_
 + **Mysql** - _Versión 2.18.1 o superior_
 + **Nodemon** - _Versión 2.0.19 o superior_
++ **Path** - _Versión 0.12.7_
 #### front-react/
 + **React** - _Versión 18.2.0 o superior_
 + **Axios** - _Versión 0.27.2_
@@ -27,9 +28,24 @@ Para ejecutar el servidor para frontend, deberá ejecutar el siguiente comando e
 ---
 
 ## Change Log
+### 18 de Julio
+#### _Versión 0.0.0a5_
+##### Frontend
++ Ahora las cartas muestran las fotos de las plantas.
++ Se ha actualizado los estilos de las cartas de plantas del catálogo.
++ Se han eliminado los CDN de **bootstrap** del archivo **index.html**.
++ Se han eliminado comentarios inncesarios del archivo **index.html**.
++ Se ha creado el directorio **/static/** dentro del directorio **/src/** donde se almacenará los archivos de hojas de estilo.
++ Se ha creado la hoja de estilo **card.css** para el estilizado de las cartas del catálogo.
+##### Backend
++ Se añadió la dependencia **path**.
++ Se creo un directorio **/static/images/** que contendrá las imágenes que se alojarán en el servidor.
++ Se puede acceder a las imagenes del servidor desde **http://localhost:9000/_nombre-de-la-imagen.jpg_**
+
+---
 
 ### 16 de Julio
-#### _Versión 0.0.0a4_(Actual):
+#### _Versión 0.0.0a4_:
 ##### Frontend
 + Creación del directorio **/component** dónde estarán guardados los componentes de react para la visualización del usuario.
 + Adición de los CDN de **bootstrap** en el archivo **index.html** para hacer diseños de pruebas.

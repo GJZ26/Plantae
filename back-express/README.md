@@ -10,8 +10,9 @@ Por el momento no hay nada.
 | Cors    |  2.8.5  |
 | MySQL   | 2.18.1  |
 | Nodemon | 2.0.19  |
+| Path    | 0.12.7  |
 
-Puedes instalar todas estas dependencias ejecutando el siguiente comando: `npm install express cors mysql`
+Puedes instalar todas estas dependencias ejecutando el siguiente comando: `npm install express cors mysql path`
 
 Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `npx nodemon app`
 
@@ -20,6 +21,13 @@ Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `np
 ---
 
 ## Change Log
+### 18 de Julio 2022
+#### _Versión 0.0.0a5_:
++ Se añadió la dependencia **path**.
++ Se creo un directorio **/static/images/** que contendrá las imágenes que se alojarán en el servidor.
++ Se puede acceder a las imagenes del servidor desde **http://localhost:9000/_nombre-de-la-imagen.jpg_**
+
+---
 
 ### 15 de Julio 2022
 #### _Versión 0.0.0a3_:

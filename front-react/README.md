@@ -18,6 +18,17 @@ Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `np
 
 ## Change Log
 
+### 18 de Julio 2022
+#### _Versión 0.0.0a5_:
++ Ahora las cartas muestran las fotos de las plantas.
++ Se ha actualizado los estilos de las cartas de plantas del catálogo.
++ Se han eliminado los CDN de **bootstrap** del archivo **index.html**.
++ Se han eliminado comentarios inncesarios del archivo **index.html**.
++ Se ha creado el directorio **/static/** dentro del directorio **/src/** donde se almacenará los archivos de hojas de estilo.
++ Se ha creado la hoja de estilo **card.css** para el estilizado de las cartas del catálogo.
+
+---
+
 ### 16 de Julio 2022
 #### _Versión 0.0.0a4_:
 + Creación del directorio **/component** dónde estarán guardados los componentes de react para la visualización del usuario.

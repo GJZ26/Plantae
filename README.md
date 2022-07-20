@@ -28,8 +28,25 @@ Para ejecutar el servidor para frontend, deberá ejecutar el siguiente comando e
 ---
 
 ## Change Log
-### 18 de Julio
-#### _Versión 0.0.0a5_
+### 20 de Julio 2022
+#### _Versión 0.0.0a6_:
+##### Frontend
++ Creación del componente **CreateNewPlant**, el cualse accede a través de la ruta **/create** (Funcional).
++ Creación de la hoja de estilo **createPlants.css**.
++ Creación de la carpeta **/imagenes** dentro del directorio **/maquetación**.
+##### Backend
++ Se renombraron los archivos del directorio **/static/images/**, para que coincida con la modificación en la base de datos.
++ Se crearon los controladores para **eliminar**, **actualizar** y **crear** registros en la tabla **planta**.
++ Correción de los mensajes de error en el documento **conexion.js**.
++ Creación de las rutas para **eliminar**, **actualizar** y **crear** registros.
++ Prueba a las API. Funcional.
+##### Database
++ Se añadió el id del registro en la ruta de las imágenes en la fila **img_ruta**.
+
+---
+
+### 18 de Julio 2022
+#### _Versión 0.0.0a5_:
 ##### Frontend
 + Ahora las cartas muestran las fotos de las plantas.
 + Se ha actualizado los estilos de las cartas de plantas del catálogo.
@@ -44,7 +61,7 @@ Para ejecutar el servidor para frontend, deberá ejecutar el siguiente comando e
 
 ---
 
-### 16 de Julio
+### 16 de Julio 2022
 #### _Versión 0.0.0a4_:
 ##### Frontend
 + Creación del directorio **/component** dónde estarán guardados los componentes de react para la visualización del usuario.

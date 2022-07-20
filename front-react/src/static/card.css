@@ -10,6 +10,7 @@ h5 {
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .cardPlant {
@@ -97,7 +98,7 @@ h5 {
 
 .filterContainer:hover>.cardText {
     height: 100px;  background: -webkit-linear-gradient(#eee, rgba(51, 51, 51, 0.11));
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0 12px;
     text-align: justify;

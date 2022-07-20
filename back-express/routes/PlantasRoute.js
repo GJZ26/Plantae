@@ -2,12 +2,15 @@
 import express from 'express';
 
 // Importamos los controladores de los métodos
-import { getAllPlant, getPlantbyID } from '../controllers/PlantasController.js';
+import { createPlant, deletePlant, getAllPlant, getPlantbyID, UpdatePlant } from '../controllers/PlantasController.js';
 
 // Instanciamos el enrutador de Express
 const router = express.Router()
 
 router.get('/catalogo/',getAllPlant)
 router.get('/catalogo/:id',getPlantbyID)
+router.put('/catalogo/:id', UpdatePlant)
+router.post('/catalogo/',createPlant)
+router.delete('/catalogo/:id',deletePlant)
 
 export default router

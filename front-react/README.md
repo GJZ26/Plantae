@@ -17,6 +17,13 @@ Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `np
 ---
 
 ## Change Log
+### 20 de Julio 2022
+#### _Versión 0.0.0a6_:
++ Creación del componente **CreateNewPlant**, el cualse accede a través de la ruta **/create** (Funcional).
++ Creación de la hoja de estilo **createPlants.css**.
++ Creación de la carpeta **/imagenes** dentro del directorio **/maquetación**.
+
+---
 
 ### 18 de Julio 2022
 #### _Versión 0.0.0a5_:

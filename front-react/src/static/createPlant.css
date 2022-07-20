@@ -1,0 +1,12 @@
+.FormPlant{
+    display: flex;
+    flex-direction: column;
+}
+
+.formPlantContainer{
+    width: 600px;
+}
+
+label{
+    margin-top: 30px;
+}

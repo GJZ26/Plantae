@@ -21,6 +21,16 @@ Para ejecutar este proyecto, ejecuta el siguiente comando desde tu terminal: `np
 ---
 
 ## Change Log
+### 20 de Julio 2022
+#### _Versión 0.0.0a6_:
++ Se renombraron los archivos del directorio **/static/images/**, para que coincida con la modificación en la base de datos.
++ Se crearon los controladores para **eliminar**, **actualizar** y **crear** registros en la tabla **planta**.
++ Correción de los mensajes de error en el documento **conexion.js**.
++ Creación de las rutas para **eliminar**, **actualizar** y **crear** registros.
++ Prueba a las API. Funcional.
+
+---
+
 ### 18 de Julio 2022
 #### _Versión 0.0.0a5_:
 + Se añadió la dependencia **path**.

@@ -18,6 +18,12 @@ Conoce la estructura de las distintas tablas de proyecto
 ---
 
 ## Change Log
+### 20 de Julio
+#### _Versión 0.0.0a6_:
++ Se añadió el id del registro en la ruta de las imágenes en la fila **img_ruta**.
+
+---
+
 ### 16 de Julio 2022
 #### _Versión 0.0.0a4_:
 + Correción de la propiedad **auto incremental** de la columna id.

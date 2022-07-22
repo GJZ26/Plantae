@@ -1,14 +1,11 @@
-
 -- Ejecuta este script para generar las tablas y bases de datos necesarias para arrancar le proyector
-
 /**
  
  Nota: Recuerda activar el módulo de SQL antes de ejecutar el script.
  
  Versión del Servidor: 10.4.24-MariaDB
  
-**/
-
+ **/
 -- Creamos la  base de datos 
 CREATE DATABASE IF NOT EXISTS Plantae;
 
@@ -16,29 +13,29 @@ CREATE DATABASE IF NOT EXISTS Plantae;
 USE Plantae;
 
 -- Creamos la tabla Plantas
-CREATE TABLE `plantas` (
-    `id` int(11) NOT NULL,
-    `nombre` varchar(100) NOT NULL,
-    `nombre_cientifico` varchar(150) NOT NULL,
-    `descripcion` text NOT NULL,
-    `tipo` varchar(100) NOT NULL,
-    `img_ruta` varchar(100) NOT NULL,
-    `stock` int(11) NOT NULL,
-    `precio` int (11) NOT NULL,
-    PRIMARY KEY (`id`)
+CREATE TABLE plantas (
+    id INT(11) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    nombre_cientifico VARCHAR(150) NOT NULL,
+    descripcion text NOT NULL,
+    tipo VARCHAR(100) NOT NULL,
+    img_ruta VARCHAR(100) NOT NULL,
+    stock INT(11) NOT NULL,
+    precio INT (11) NOT NULL,
+    PRIMARY KEY (id)
 ) ENGINE = InnoDB;
 
 -- Insercción de datos a la tabla plantas
 INSERT INTO
-    `plantas`(
-        `id`,
-        `nombre`,
-        `nombre_cientifico`,
-        `descripcion`,
-        `tipo`,
-        `img_ruta`,
-        `stock`,
-        `precio`
+    plantas(
+        id,
+        nombre,
+        nombre_cientifico,
+        descripcion,
+        tipo,
+        img_ruta,
+        stock,
+        precio
     )
 VALUES
     (
@@ -164,8 +161,52 @@ VALUES
 
 -- Modificaciones del valor auto-incremental de la llave primaria de la tablas planta
 ALTER TABLE
-    `plantas`
+    plantas
 MODIFY
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 13
-;
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 13;
+
+-- CREACIÓN DE LA TABLA  USUARIOS PARA EL LOGIN --
+-- Usamos la base de datos
+USE Plantae;
+
+-- Creamos la tabla usuarios
+CREATE TABLE IF NOT EXISTS usuarios(
+    id INT(11) NOt NULL,
+    username VARCHAR (100) NOT NULL,
+    email VARCHAR (100) NOT NULL,
+    pwd VARCHAR (100) NOT NULL,
+    priv INT (1) NOT NULL, -- 1 es para admin 0 es para cliente
+    PRIMARY KEY (id)
+);
+
+-- Insercción de los usuarios
+INSERT INTO
+    usuarios(
+        id,
+        username,
+        email,
+        pwd,
+        priv
+    )
+VALUES
+(
+        1,
+        'Adolfo Juarez',
+        'admin@mail.com',
+        '12345',
+        1
+    ),
+    (
+        2,
+        'Yael Cruz',
+        'client@mail.com',
+        '12345',
+        0
+    );
+
+ALTER TABLE
+    usuarios
+MODIFY
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 3;

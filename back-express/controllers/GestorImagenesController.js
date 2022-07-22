@@ -10,13 +10,14 @@ import axios from 'axios';
 let AI;
 
 export function actualizarAI (){
-    getAI().then(res => AI = res).then(res => console.log(AI))
+    getAI().then(res => AI = res).then(res => console.log(`Auto incremento actual: ${AI}`))
 }
 
 export const getAI = async () => {
     const res = await axios.get('http://localhost:8000/images/AI')
     return res.data
 }
+
 // Esta función indica dónde almacenara las imágenes, en la carpeta /static/images
 // Cambiará el nombre a "nombreporDefault-milisegundos.extensión" 
 // Ej. Azalea-1231687412515.jpg
@@ -36,3 +37,11 @@ export const diskStorage = multer.diskStorage({
 export const fileUpload = multer({
     storage: diskStorage
 }).single('image')
+
+export const SubirImg = (req, res) => {
+    actualizarAI();
+    req.getConnection((err, conn) => {
+        if (err) return res.status(500).send(`Error al subir el contenido: ${err}`)
+        res.send(`${req.file.originalname} ha sido almacenado correctamente`)
+    })
+}

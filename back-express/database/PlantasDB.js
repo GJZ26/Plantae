@@ -1,5 +1,6 @@
 /* Prueba de usar MySql en vez de Sequilize */
 import mysql from 'mysql';
+
 const db = mysql.createConnection({
     host:'localhost',
     user:'root',
@@ -10,7 +11,7 @@ const db = mysql.createConnection({
 db.connect(
     function(err){
         if(err) throw console.error(`Error al conectar a la base de dato: ${err}`)
-        console.info('Conexión exitosa')
+        console.info('Conexión a la base de datos Plantae exitosa')
     }
 )
 

@@ -1,0 +1,105 @@
+.plusIcon{
+    width: 12px;
+    height: 12px;
+}
+
+.iconClassic{
+    width: 20px;
+    margin: 10px 8px;
+}
+
+.cardAdminContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-crear{
+    background-color: rgb(46, 74, 196);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50px;
+    margin-top: 18px;
+}
+
+.btn-crear:hover{
+    background-color: rgb(0, 47, 255);
+}
+
+.cardAdmin{
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    width: 800px;
+    border-radius: 10px;
+    justify-content: space-between;
+    color: rgb(49, 49, 49);
+    margin: 18px 0;
+}
+
+.img{
+    background-color: rgb(201, 201, 201);
+    width: 230px;
+    height: 230px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.nombrePlant{
+    margin: 35px 0 0 0;
+    font-size: 25px;
+}
+
+.nombreC-Plant{
+    font-style: italic;
+    color: rgb(92, 92, 92);
+}
+
+.descripcionPlant{
+    width: 400px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: clip;
+    text-align: justify;
+}
+
+.precio{
+    color: rgb(23, 88, 23);
+}
+
+.disponible{
+    color: rgb(23, 24, 88);
+}
+
+.botonera{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.btnAdmin{
+    border-radius: 50%;
+    background-color: gray;
+    border: none;
+    color: white;
+}
+
+.edit{
+    background-color: rgb(62, 62, 240);
+}
+
+.edit:hover{
+    background-color: rgb(25, 25, 240);
+}
+
+.delete{
+    background-color: rgb(245, 58, 58);
+}
+
+.delete:hover{
+    background-color: rgb(240, 25, 25);
+    cursor: pointer;
+}

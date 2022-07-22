@@ -3,7 +3,9 @@ import './App.css';
 
 // Importamos los componentes
 import CrearPlanta from './component/CreateNewPlant.jsx';
-import MostrarPlantas from './component/MenuPlantas.jsx';
+import MostrarPlantas from './component/CardPlants';
+import CardAdminPlant from './component/AdminCardPlants';
+import EditPlant from './component/EditPlant';
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       <BrowserRouter /* Indispensable para el redireccionamiento */ >
         <Routes>
           <Route path='/' element={< MostrarPlantas />} />
-          <Route path='/create' element={<CrearPlanta/>} />
+          <Route path='/admin/create' element={<CrearPlanta />} />
+          <Route path='/admin' element={<CardAdminPlant />} />
+          <Route path='/admin/edit/:id' element={<EditPlant />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,6 +1,0 @@
-
-/*
-
-    Aquí habrá algún modelo
-
-*/

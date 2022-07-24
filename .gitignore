@@ -1,0 +1,4 @@
+# Exclusión de los archivos para control de versiones
+# Módulos de react y Express
+back-express/node_modules
+front-react/node_modules

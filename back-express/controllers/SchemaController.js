@@ -1,19 +1,5 @@
-/* Prueba de usar MySql en vez de Sequilize */
-import mysql from 'mysql';
 import express from 'express';
-
-const schema = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: ''
-})
-
-schema.connect(
-    function (err) {
-        if (err) throw console.error(`Error al conectar a la base de dato: ${err}`)
-        console.info('Conexión exitosa')
-    }
-)
+import schema from '../database/SchemaDB.js';
 
 export const AINow = async (req, res) => {
 

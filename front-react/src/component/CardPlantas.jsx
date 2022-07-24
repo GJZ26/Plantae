@@ -9,7 +9,7 @@ import '../static/card.css'
 const URI = 'http://localhost:8000/plantae/catalogo/'
 
 // Creamos el componente principal para el menú de las plantas
-const MostrarPlantas = () => {
+const CardPlantas = () => {
 
     // Creamos el useState
     const [plants, setPlanta] = useState([])
@@ -47,4 +47,4 @@ const MostrarPlantas = () => {
     );
 }
 
-export default MostrarPlantas
+export default CardPlantas

@@ -1,14 +1,16 @@
-// Importamos express
-import express from 'express';
+// Importamos los controladores
+import express from "express";
 
-// Importamos los métodos
-import { index, validarUser } from '../controllers/UsuariosController.js';
+// Importamos los controladores
+import { login, register, verifySession } from "../controllers/UsuariosController.js";
 
 // Usamos los enrutadores de express
-const router = express.Router();
+const router = express.Router()
 
-// Declaración de las rutas
-router.get('/', index)
-router.post('/',validarUser)
+// Declaramos las rutas
+router.post('/register', register)
+router.post('/login', login)
+router.get('/login', verifySession)
 
+// Importamos las rutas
 export default router

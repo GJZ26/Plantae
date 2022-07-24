@@ -4,11 +4,13 @@ import cors from 'cors'
 import mysql from 'mysql'
 import myconn from 'express-myconnection'
 import bodyParser from 'body-parser'
+import cookieParser from 'cookie-parser'
+import session from 'express-session'
 
 // Importamos las rutas
 import plantRoutes from './routes/PlantasRoute.js'
 import imagenesRoute from './routes/GestorImagenesRoutes.js'
-import usuariosRoute from './routes/UsuariosRoutes.js'
+import usuariosRoutes from './routes/UsuariosRoutes.js'
 
 // Cosa rara para tener las variables __diraname :)
 import path from 'path'
@@ -31,15 +33,31 @@ app.use(myconn(mysql, {
 app.use(express.static(path.join(__dirname, '/static/images/')))
 
 // Declaramos las herramientas del servidor
-app.use(cors())
+app.use(cors({ // Configuramos los permisos de CORS para usar cookies
+    origin: ['http://localhost:3000'],
+    methods: ['POST', 'GET'],
+    credentials: true
+}))
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json({ limit: '10mb' }))
 
+// Configuración para almecenar y leer cookies en el almacenamiento del usuario
+app.use(cookieParser())
+app.use(session({
+    key: 'user',
+    secret: 'plants are beautiful :)',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 60 * 60 * 24
+    }
+}))
+
 // Declaramos la ruta raíz para las distintas APIS instanciadas
 app.use('/plantae', plantRoutes)
 app.use('/images', imagenesRoute)
-app.use('/user', usuariosRoute)
+app.use('/users', usuariosRoutes)
 
 // Levantamos el servidor en el puerto 8000
 app.listen(8000, () => {

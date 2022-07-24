@@ -172,41 +172,10 @@ USE Plantae;
 
 -- Creamos la tabla usuarios
 CREATE TABLE IF NOT EXISTS usuarios(
-    id INT(11) NOt NULL,
+    id INT(11) NOT NULL AUTO_INCREMENT,
     username VARCHAR (100) NOT NULL,
     email VARCHAR (100) NOT NULL,
     pwd VARCHAR (100) NOT NULL,
-    priv INT (1) NOT NULL, -- 1 es para admin 0 es para cliente
+    priv VARCHAR (50) NOT NULL,
     PRIMARY KEY (id)
 );
-
--- Insercción de los usuarios
-INSERT INTO
-    usuarios(
-        id,
-        username,
-        email,
-        pwd,
-        priv
-    )
-VALUES
-(
-        1,
-        'Adolfo Juarez',
-        'admin@mail.com',
-        '12345',
-        1
-    ),
-    (
-        2,
-        'Yael Cruz',
-        'client@mail.com',
-        '12345',
-        0
-    );
-
-ALTER TABLE
-    usuarios
-MODIFY
-    id INT(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 3;

@@ -179,3 +179,40 @@ CREATE TABLE IF NOT EXISTS usuarios(
     priv VARCHAR (50) NOT NULL,
     PRIMARY KEY (id)
 );
+
+-- Insertamos la información de usuarios a la base de datos usuario
+INSERT INTO
+    usuarios(username, email, pwd, priv)
+VALUES
+    (
+        'Adolfo Juárez',
+        'admin@mail.com',
+        '$2b$10$g1akR80g70wclNUJk8MX..bkNrVDYmTcBY5xG71S1gD.2UykwidgO',
+        -- Contraseña del 1-5 incremental
+        'admin'
+    ),
+    (
+        'Manolo Ruiz',
+        'client@mail.com',
+        '$2b$10$qsuCBIcOGQNg7vXQ71C1uuyAjzqzrvShc460dbKHn0WBhnJqqUwxa',
+        -- Contraseña del 6-0 incremental
+        'client'
+    );
+
+-- CREACION DE LA TABLA CARRITO Y RELACION CON LA TABLA CLIENTE Y PLANTAS
+CREATE TABLE IF NOT EXISTS carrito(
+    id INT NOT NULL AUTO_INCREMENT,
+    folio VARCHAR (60),
+    id_user INT NOT NULL,
+    id_planta INT NOT NULL,
+    cantidad INT NOT NULL,
+    PRIMARY KEY (id),
+
+    -- Importamos las llaves foráneas para usuarios
+    CONSTRAINT FK_id_usuario FOREIGN KEY (id_user) 
+    REFERENCES usuarios(id),
+
+    -- Importamos las llaves foránear para las plantas
+    CONSTRAINT FK_id_plantas FOREIGN KEY (id_planta)
+    REFERENCES plantas(id)
+)

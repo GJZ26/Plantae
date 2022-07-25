@@ -18,6 +18,7 @@ function App() {
           <Route path='/admin/create' element={<CrearPlanta />} />
           <Route path='/admin' element={<CardAdminPlant />} />
           <Route path='/admin/edit/:id' element={<EditPlant />} />
+          <Route path='/cart'></Route>
         </Routes>
       </BrowserRouter>
     </div>

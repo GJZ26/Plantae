@@ -1,4 +1,4 @@
-// Importamos los controladores
+// Importamos las dependencias
 import express from "express";
 
 // Importamos los controladores

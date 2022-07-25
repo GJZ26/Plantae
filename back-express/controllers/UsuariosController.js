@@ -16,7 +16,7 @@ export const login = (req, res) => {
             bcrypt.compare(password, rows[0].pwd, (error, response) => {
                 if (error) throw error
                 if (response) {
-                    req.session.user = rows[0].username
+                    req.session.user = rows[0]
                     console.log(req.session.user)
                     res.send('Sesión iniciada')
                 } else {

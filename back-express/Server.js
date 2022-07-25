@@ -11,6 +11,7 @@ import session from 'express-session'
 import plantRoutes from './routes/PlantasRoute.js'
 import imagenesRoute from './routes/GestorImagenesRoutes.js'
 import usuariosRoutes from './routes/UsuariosRoutes.js'
+import cartRoutes from './routes/CarritoRoutes.js'
 
 // Cosa rara para tener las variables __diraname :)
 import path from 'path'
@@ -29,8 +30,9 @@ app.use(myconn(mysql, {
     database: 'Plantae'
 }))
 
-// Convertimos estático la carpeta dónde se almacenan nuestras imagenes y acceder desde cliente
+// Convertimos estático la carpeta dónde se almacenan nuestras imagenes para el acceso del cliente
 app.use(express.static(path.join(__dirname, '/static/images/')))
+app.use(express.static(path.join(__dirname,'/static/public/')))
 
 // Declaramos las herramientas del servidor
 app.use(cors({ // Configuramos los permisos de CORS para usar cookies
@@ -58,6 +60,7 @@ app.use(session({
 app.use('/plantae', plantRoutes)
 app.use('/images', imagenesRoute)
 app.use('/users', usuariosRoutes)
+app.use('/cart', cartRoutes)
 
 // Levantamos el servidor en el puerto 8000
 app.listen(8000, () => {

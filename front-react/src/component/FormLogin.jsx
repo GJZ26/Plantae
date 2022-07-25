@@ -47,7 +47,7 @@ function FormLogin() {
   const isLoggin = () =>{
     axios.get(URI+'login').then((response)=>{
       if(response.data.isLogged){
-        console.log(response.data.user)
+        console.log(response.data.user.username)
       }
     })
   }

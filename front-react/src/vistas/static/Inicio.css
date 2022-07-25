@@ -1,311 +1,71 @@
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  background: #fff;
-  font-family: 'Open Sans', 'Arial';
-  font-size: 16px;
-}
-
-.contenedor {
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-}
-
-header {
-  background: url("./Images/image-menu1.jpg"), rgba(16, 69, 71, 0.45);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background-repeat: repeat;
-  background-size: cover;
+.mainSection {
+  background-image: url('http://localhost:8000/selva.jpg');
   background-position: center;
-  max-width: 100%;
-}
-
-/*header .logo-menu{
-  background: url("../Images/image-menu1.jpg"), rgba(16, 69, 71, 0.45);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  background-repeat: repeat;
   background-size: cover;
-  background-position: center;
-  max-width: 100%;
   height: 600px;
-  position: sticky;
-  left: 0px;top: 150px;
-}*/
-
-/*------------MENU CSS--------------------*/
-header .contenedor-menu .image-menu {
-  background: url("./Images/plantae4.png");
-  background-repeat: no-repeat;
-  height: 65px;
-  width: 1000px;
-  margin-left: 1%;
-
+  width: 100%;
 }
-
-header .contenedor-menu {
-  padding: 0px;
+.saludos, .brand{
+  color: white;
 }
-
-header .menu1 {
-  display: block;
-  width: 500px;
-}
-
-header .menu {
-  margin: 0px 0;
-  text-align: right;
-}
-
-header .menu li {
-  display: inline-block;
-
-}
-
-header .menu li ul {
-  display: none;
-  position: absolute;
-
-}
-
-header .menu li:hover ul {
-  width: 140px;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: absolute;
-  color: #000;
-  text-align: left;
-
-}
-
-header .contenedor-menu {
-  display: flex;
-  flex-direction: row;
-}
-
-header .contenedor-menu .menu1 .menu a {
-  margin: 0px 10px;
-  padding-top: 10px;
-  color: #fff;
-  padding-bottom: 9px;
-  font-size: 1em;
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-}
-
-header .menu li:hover {
-  border-bottom: 2px solid #fff;
-}
-
-header .contenedor-texto {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 0px 0;
-  padding: 190px 0
-}
-
-header .contenedor-texto .texto {
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 3px;
-  display: inline-block;
-  text-align: center;
-  padding: 20px 60px;
-}
-
-header .contenedor-texto .texto h1,
-header .contenedor-texto .texto h2 {
-  color: #fff;
-  font-weight: 300;
-  margin: 0;
-}
-
-header .contenedor-texto .texto .nombre {
-  margin-bottom: 10px;
+.saludos{
   font-size: 50px;
-  line-height: 50px;
+  font-weight: 400;
 }
 
-header .contenedor-texto .texto .profesion {
-  font-size: 25px;
-  line-height: 25px;
+.brand{
+  font-size: 75px;
+  font-weight: bold;
 }
 
-/*--------------texto-----------------------*/
-.main .contenedor {
-  overflow: visible;
-}
-
-.main .acerca-de {
-  text-align: center;
-}
-
-.main .acerca-de .texto {
-  color: #5a5a5a;
-  font-size: 20px;
-  line-height: 27px;
-  width: 80%;
-  margin: 40px auto 60px auto;
-}
-
-.main .acerca-de .texto .titulo {
-  margin-bottom: 40px;
-  font-size: 36px;
-  line-height: 49px;
-  font-weight: 300;
-  color: #4B5358;
-  text-align: center;
-}
-
-
-
-
-.main .trabajos {
-  background: rgba(210, 214, 239, 0.48);
-  padding: 60px 0;
-}
-
-.main .trabajos .contenedor {
-  overflow: hidden;
-}
-
-.main .trabajos .titulo {
-  font-size: 36px;
-  line-height: 49px;
-  margin-bottom: 60px;
-  font-weight: 300;
-  color: #4B5358;
-  text-align: center;
-}
-
-.main .trabajos .contenedor-trabajos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.main .trabajos .contenedor-trabajos .trabajo {
-  width: 23%;
-  margin-bottom: 40px;
-}
-
-.main .trabajos .contenedor-trabajos .trabajo .thumb {
+.filterMain{
   width: 100%;
-  margin-bottom: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  backdrop-filter: blur(1px) brightness(80%);
 }
 
-.main .trabajos .contenedor-trabajos .trabajo .thumb img {
-  vertical-align: top;
-  width: 100%;
-  border-radius: 3px;
-}
-
-.main .trabajos .contenedor-trabajos .trabajo .descripcion {
+.Centered{
   text-align: center;
-}
-
-.main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 27px;
-
-  color: #4B5358;
-  margin-bottom: 10px;
-}
-
-.main .trabajos .contenedor-trabajos .trabajo .descripcion .categoria {
-  font-size: 14px;
-  color: #636363;
-}
-
-
-
-footer .footer-general {
-  background: #95de95;
-  height: 240px;
-
-}
-
-footer .footer-general .contenedor {
-  padding-top: 40px;
-  flex-direction: row;
-  flex-wrap: wrap;
   display: flex;
-
-}
-
-footer .footer-general .contenedor .footer-datos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-}
-
-footer .footer-general .contenedor .footer-datos .redes-iconos {
-  display: flex;
+  align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
-  left: 50px;
-
-
 }
 
-footer .footer-general .contenedor .footer-datos .redes-iconos img {
-  margin: 10px;
-}
-
-footer .footer-general .contenedor .footer-datos .redes-texto {
-  margin-left: 66px;
+div.aboutUs{
+  text-align: center;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 15px;
-
 }
 
-footer .footer-general .contenedor .footer-datos .redes-texto a {
-  text-decoration: none;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
+h2.headerMain{
+  font-size: 35px;
+  margin-top: 70px;
+  font-weight: 400;
+}
+
+.aboutInfo{
+  width: 60%;
+}
+
+.text{
   font-size: 20px;
-  line-height: 27px;
-  color: #4B5358;
+  text-align: justify;
+  color: rgb(27, 27, 27);
 }
 
-footer .footer-general .contenedor .footer-datos .Acerca-de p {
+a{
   text-decoration: none;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 27px;
-  color: #4B5358;
-  margin-top: 20px;
-  text-align: left;
+  color: rgb(20, 145, 118);
 }
 
-footer .footer-general .contenedor .footer-datos .Acerca-de {
-  width: 600px;
-  margin-left: 50px;
+a:hover{
+  color: rgb(0, 122, 65);
+}
+.cat{
+  width: 90%;
 }

@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Navbar from './Navbar.jsx'
 
 // Importamos hoja de estilo
 import '../static/createPlant.css'
@@ -80,6 +81,7 @@ const CrearPlanta = () => {
 
     return (
         <div className="formPlantContainer">
+            <Navbar/>
             <div className="registerContainer">
                 <h3 className="PlantCreate">Añadir nueva planta</h3>
                 <hr />

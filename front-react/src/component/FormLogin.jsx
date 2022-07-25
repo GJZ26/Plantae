@@ -1,5 +1,6 @@
 // Importamos dependencias
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import '../static/form.css'
 
@@ -7,6 +8,8 @@ const URI = 'http://localhost:8000/users/'
 
 // Este componente renderiza el formulario de inicio de sesion
 function FormLogin() {
+
+  const navigate = useNavigate()
 
   // Estados para la información del login
   const [emailLog, setEmailLog] = useState('')
@@ -28,7 +31,13 @@ function FormLogin() {
       email: emailReg,
       password: passwordReg
     }).then((response) => {
-      console.log(response.data)
+      if(response.data.register){
+        alert(response.data.message)
+        navigate('/login')
+      }else{
+        alert(response.data.message)
+        navigate('/login')
+      }
     })
   }
 
@@ -39,14 +48,19 @@ function FormLogin() {
       email: emailLog,
       password: passwordLog
     }).then((response) => {
-      console.log(response.data)
+      if (response.data.login) { 
+        alert(response.data.message)
+        navigate('/')
+      }else{
+        alert(response.data.message)
+      }
     })
   }
 
   // Verifica si hay sesiones abiertas según las cookies
-  const isLoggin = () =>{
-    axios.get(URI+'login').then((response)=>{
-      if(response.data.isLogged){
+  const isLoggin = () => {
+    axios.get(URI + 'login').then((response) => {
+      if (response.data.isLogged) {
         console.log(response.data.user.username)
       }
     })
@@ -58,7 +72,7 @@ function FormLogin() {
   return (
     <div className='formLogin' onSubmit={login}>
       <form className='login'>
-        <h2>Inicia Sesión</h2>
+        <h2 className='login'>Inicia Sesión</h2>
 
         <label htmlFor="email">Correo Electrónico</label>
         <input type="email" onChange={(e) => { setEmailLog(e.target.value) }} />
@@ -66,11 +80,11 @@ function FormLogin() {
         <label htmlFor="password">Contraseña</label>
         <input type="password" onChange={(e) => { setpasswordLog(e.target.value) }} />
 
-        <button type='submit'>Iniciar Sesión</button>
+        <button className='primary login' type='submit'>Iniciar Sesión</button>
       </form>
 
       <form className='register' onSubmit={register}>
-        <h2>Crea una nueva cuenta</h2>
+        <h2 className='register'>Crea una nueva cuenta</h2>
 
         <label htmlFor="username">Nombre de Usuario</label>
         <input type="text" onChange={(e) => { setUserNameReg(e.target.value) }} />
@@ -79,9 +93,9 @@ function FormLogin() {
         <input type="email" onChange={(e) => { setEmailReg(e.target.value) }} />
 
         <label htmlFor="password">Contraseña</label>
-        <input type="password" onChange={(e) => { setpasswordReg(e.target.value) }} />
+        <input type="password" required onChange={(e) => { setpasswordReg(e.target.value) }} />
 
-        <button type='submit'>Iniciar Sesión</button>
+        <button className='primary register' type='submit'>Registrarse</button>
       </form>
     </div>
   )

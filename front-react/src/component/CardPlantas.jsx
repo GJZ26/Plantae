@@ -43,14 +43,14 @@ const CardPlantas = () => {
     const addtoCart = async (e, idProduct) => {
         e.preventDefault()
         if (idUser === 0) {
-            console.log('Debes Iniciar sesión para abrir tu carrito')
+            alert('Debes Iniciar sesión para abrir tu carrito')
         } else {
             await axios.post(`${URI_CART}add`, {
                 idUser: idUser,
                 idPlant: idProduct,
                 cantidad: amount,
                 limit: limitStock
-            }).then((response) => (console.log(response.data)))
+            }).then((response) => (alert(response.data)))
         }
     }
 
@@ -65,15 +65,16 @@ const CardPlantas = () => {
                     <div className="infoCard">
                         <h5 className="cardTitle">{plant.nombre}</h5>
                         <p className="cardNombreC">{plant.nombre_cientifico}</p>
+                        <p className="tipo">{plant.tipo}</p>
                         <p className="cardText">
                             {plant.descripcion}
                         </p>
                         <p className="cardPrice"><strong className="price">Precio: </strong><span className="price">${plant.precio}.00 MXN</span></p>
                         <p className="cardStock"><strong className="stock">Disponible: </strong><span className="stock">{plant.stock}</span></p>
-                        <form onSubmit={(e) => (addtoCart(e, plant.id))}>
+                        <form className='formCart' onSubmit={(e) => (addtoCart(e, plant.id))}>
                             <label htmlFor="amountCart" className="amountCart">Cantidad</label>
                             <input type="number" onChange={(e) => (setAmount(e.target.value))} min='1' max={plant.stock} />
-                            <button type="submit" className="cartBtn" onClick={()=>(setLimitStock(plant.stock))}>Añadir a Carrito</button>
+                            <button type="submit" className="primary so" onClick={()=>(setLimitStock(plant.stock))}>Añadir a Carrito</button>
                         </form>
                     </div>
                 </div>

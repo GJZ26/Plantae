@@ -1,0 +1,82 @@
+.cardContainer {
+    width: 100%;
+}
+
+.cardBest {
+    background-color: rgb(243, 243, 243);
+    height: 230px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.596);
+}
+
+.best {
+    margin-bottom: 30px;
+    color: rgb(122, 8, 0);
+}
+
+.bestImg {
+    width: 30%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.info {
+    width: 70%;
+}
+
+.nombreBest {
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+.nombreC {
+    margin-top: 0;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.infoAditional {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dispo {
+    color: rgb(0, 66, 0);
+    font-size: 16px;
+}
+
+.tipo {
+    color: rgb(0, 46, 31);
+    font-size: 16px;
+}
+
+.precioLabel {
+    margin-top: 0;
+    color: rgb(204, 14, 0);
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
+.primary {
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    text-transform: uppercase;
+    background-color: rgb(0, 196, 137);
+    color: white;
+    font-weight: bold;
+}
+
+.primary:hover{
+    cursor: pointer;
+    background-color: rgb(0, 221, 155);
+}

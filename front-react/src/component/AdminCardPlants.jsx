@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar.jsx'
 
 import '../static/cardAdmin.css'
 
@@ -36,6 +37,7 @@ const CardAdminPlant = () => {
 
     return (
         <div className='cardAdminContainer'>
+            <Navbar/>
 
             <Link to='/admin/create' className='btn-crear'>
                 <img src={plusIcon} alt='Crear' className='plusIcon' />

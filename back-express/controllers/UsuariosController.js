@@ -18,13 +18,22 @@ export const login = (req, res) => {
                 if (response) {
                     req.session.user = rows[0]
                     console.log(req.session.user)
-                    res.send('Sesión iniciada')
+                    res.json({
+                        login: true,
+                        message: 'Sesión iniciada'
+                    })
                 } else {
-                    res.send('Contraseña incorrecta')
+                    res.json({
+                        login: false,
+                        message: 'Contraseña Incorrecta'
+                    })
                 }
             })
         } else {
-            res.send('El usuario no existe')
+            res.json({
+                login: false,
+                message: 'El usuario no existe'
+            })
         }
     })
 }
@@ -38,7 +47,10 @@ export const register = (req, res) => {
     db.query('SELECT * FROM usuarios WHERE email = ?', [email], (err, rows) => {
         if (err) throw err
         if (rows.length > 0) {
-            res.send("Ya existe un usuario registrado con este email, inténte de nuevo")
+            res.json({
+                        register: false,
+                        message: 'Ya existe un usuarion con este correo'
+                    })
         } else {
             bcrypt.hash(password, rounds, (err, hash) => {
                 if (err) {
@@ -46,7 +58,10 @@ export const register = (req, res) => {
                 } else {
                     db.query('INSERT INTO usuarios (username, email, pwd, priv) VALUES (?, ?, ?, "cliente")', [username, email, hash], (error, rows) => {
                         if (error) res.json(error)
-                        res.send('Registro Exitoso')
+                        res.json({
+                            register: true,
+                            message: 'Registro Exitoso'
+                        })
                     })
                 }
 
@@ -68,4 +83,11 @@ export const verifySession = (req, res) => {
             isLogged: false
         })
     }
+}
+
+export const logout = (req, res) =>{
+    req.session.destroy()
+    res.send({
+        isLogged: false
+    })
 }

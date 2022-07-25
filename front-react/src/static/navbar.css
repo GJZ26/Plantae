@@ -1,0 +1,43 @@
+.Navbar{
+    background-color: white;
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 1px 5px rgba(95, 95, 95, 0.288);
+}
+
+.logoLink{
+    margin-left: 30px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin:30px;
+}
+.botonMenu{
+    margin-left: 12px;
+    color: rgb(20, 145, 118);
+}
+
+.botonMenu:hover{
+    cursor: pointer;
+    color: rgba(0, 160, 67, 0.815);
+}
+
+.nombreUser{
+    font-size: 16px;
+    color: rgb(0, 175, 67);
+    margin-left: 20px;
+}
+
+.salitos{
+    display: flex;
+    align-items: center;
+}

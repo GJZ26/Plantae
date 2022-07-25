@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname,'/static/public/')))
 // Declaramos las herramientas del servidor
 app.use(cors({ // Configuramos los permisos de CORS para usar cookies
     origin: ['http://localhost:3000'],
-    methods: ['POST', 'GET'],
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],
     credentials: true
 }))
 app.use(express.json())

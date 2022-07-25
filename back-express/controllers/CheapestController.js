@@ -50,12 +50,16 @@ class BinTree {
 
 }
 
-db.query('SELECT * FROM plantas WHERE stock > 0', (err, rows) => {
-    if (err) throw err
-    const BnTree = new BinTree()
-    for (let i = 0; i < rows.length; i++) {
-        BnTree.insert(rows[i])
-    }
-    const min = BnTree.findMinNode(BnTree.root)
-    console.log(min)
-})
+export const getCheapest = async (req, res) => {
+
+    db.query('SELECT * FROM plantas WHERE stock > 0', (err, rows) => {
+        if (err) throw err
+        const BnTree = new BinTree()
+        for (let i = 0; i < rows.length; i++) {
+            BnTree.insert(rows[i])
+        }
+        const min = BnTree.findMinNode(BnTree.root)
+        res.json(min)
+    })
+
+}

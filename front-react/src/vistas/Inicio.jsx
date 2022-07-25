@@ -2,90 +2,29 @@ import React from 'react'
 import './static/Inicio.css'
 
 // Importamos las cartas de las plantas
-import CardPlantas from '../component/CardPlantas.jsx'
+import CheapestPlant from '../component/CheapestPlant.jsx'
+import Navbar from '../component/Navbar.jsx'
+import { Link } from 'react-router-dom'
 
 function Inicio() {
     return (
-        <div className="render">
-            <header>
-                <div className="contenedor-menu">
-                    <div className="image-menu">
-                    </div>
-                    <div className="menu1">
-                        <nav className="menu">
-                            <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="#acerca-de">Acerca de</a>
-                                </li>
-                                <li><a href="#">Categorias</a><ul>
-                                    <li><a href="sombra.html">Sombra</a></li>
-                                    <li><a href="acuaticas.html">Acuaticas</a></li>
-                                    <li><a href="interior.html">interior</a></li>
-                                    <li><a href="musica.html">Musica</a></li>
-                                    <li><a href="tropicales.html">Tropicales</a></li>
-                                    <li><a href="sol.html">Sol</a></li>
-                                </ul></li>
-                                <li><a href="/admin">Administrar</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+        <div className='Home'>
+            <Navbar></Navbar>
+            <div className="mainSection">
+                <div className="filterMain">
+                    <h2 className="saludos">Bienvenido a</h2>
+                    <h1 className="brand">Plantae</h1>
                 </div>
-
-                <div className="logo-menu">
-                    <div className="contenedor-texto">
-                        <div className="texto">
-                            <h1 className="nombre">Bienvenidos a Plantae</h1>
-                            <h2 className="profesion">Tu tienda de confianza</h2>
-                        </div>
-                    </div>
+                <div className="aboutUs Centered">
+                    <h2 className='headerMain'>¿Quiénes somos?</h2>
+                    <p className="aboutInfo text">Somos una tienda en línea mexicana dedicada a la venta y distribución de plantas de cualquier tipo a cualquier parte del mundo. En Plantae, somos expertos en el cuidado y trato con nuestros clientes, brindando un excelente servicio para todos los que se adentren al mundo botánico.</p>
                 </div>
-            </header>
-
-            <section className="main">
-                <section className="acerca-de">
-                    <div className="contenedor">
-                        <div className="texto">
-                            <h3 className="titulo">¿Qué son las plantas?</h3>
-                            <p>Las plantas son los seres vivos miembros del reino vegetal o phylum plantae. Se trata de organismos autótrofos, desprovistos de capacidad de movimiento, y compuestos principalmente de celulosa. Los árboles, la maleza, el césped, las algas y los arbustos, son todos miembros de este reino de la vida.</p>
-                            <br />
-                        </div>
-                    </div>
-                </section>
-
-                <section className="trabajos">
-                    <div className="contenedor">
-                        <h3 className="titulo">Nuestras Plantas</h3>
-
-                        <div className="contenedor-trabajos">
-                            <CardPlantas />
-                        </div>
-
-                    </div>
-                </section>
-
-            </section>
-            <footer>
-                <div className="footer-general">
-                    <div className="contenedor">
-                        <div className="footer-datos">
-                            <div className="redes-iconos">
-                                <a href="#"><img src={"./static/Images/redes/1.png"} alt="" /></a>
-                                <a href="#"><img src={"./static/Images/redes/2.png"} alt="" /></a>
-                                <a href="#"><img src={"./static/Images/redes/3.png"} alt="" /></a>
-                            </div>
-                            <div className="redes-texto">
-                                <a href="#">Instagram</a>
-                                <a href="#">Twitter</a>
-                                <a href="#">Facebook</a>
-                            </div>
-                            <div className="Acerca-de" id="acerca-de">
-                                <p>Acerca de</p>
-                                <p>Somos una pagina que se dedica a la venta de plantas y manejamos diferentes categorias</p>
-                            </div>
-                        </div>
-                    </div>
+                <div className="catalogo Centered">
+                    <h2 className="headerMain">Nuestro Catálogo</h2>
+                    <p className="text aboutInfo">Visita nuestro jardín botánico ó mira nuestro <Link to='/catalogo'>catálogo en línea</Link> y elije tu planta favorita desde la comodidad de tu casa, y sigue llenando de vida a tu hogar con nuetras plantas calidad</p>
+                    <CheapestPlant></CheapestPlant>
                 </div>
-            </footer>
+            </div>
         </div>
     )
 }

@@ -10,7 +10,7 @@ import db from "../database/PlantasDB.js"
 // Mostrar todas las plantas
 export const getAllPlant = async (req, res) => {
 
-    db.query('SELECT * FROM plantas', function (err, rows) {
+    db.query('SELECT * FROM plantas WHERE stock > 0', function (err, rows) {
         if (err) throw res.json({ message: err.message })
         res.json(rows)
     })

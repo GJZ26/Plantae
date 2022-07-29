@@ -1,0 +1,62 @@
+.AlertCart{
+    text-align: center;
+    margin: 180px 0;
+}
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.CardCart{
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    width: 500px;
+    margin: 12px 0;
+    box-shadow: 1px 1px 3px rgba(110, 110, 110, 0.267);
+}
+
+.imgCart{
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.infoCart{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nombre{
+    font-size: 35px;
+}
+
+.folio{
+    font-size: 15px;
+    color: rgb(73, 73, 73);
+}
+
+.cantidad{
+    margin-top: 12px;
+}
+
+.buy, .deleteCart{
+    border: none;
+    margin-top: 12px;
+    font-size: 15px;
+    padding: 5px 9px;
+    border-radius: 12px;
+}
+
+.buy{
+    background-color: rgb(127, 255, 127);
+}
+
+.deleteCart{
+    background-color: rgb(255, 127, 127);
+}

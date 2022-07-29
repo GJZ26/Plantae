@@ -3,6 +3,7 @@ import './static/Inicio.css'
 
 // Importamos las cartas de las plantas
 import CheapestPlant from '../component/CheapestPlant.jsx'
+import Footer from '../component/Footer.jsx'
 import Navbar from '../component/Navbar.jsx'
 import { Link } from 'react-router-dom'
 
@@ -10,10 +11,12 @@ function Inicio() {
     return (
         <div className='Home'>
             <Navbar></Navbar>
-            <div className="mainSection">
-                <div className="filterMain">
-                    <h2 className="saludos">Bienvenido a</h2>
-                    <h1 className="brand">Plantae</h1>
+            <div className="contenedorPrincipal">
+                <div className="mainSection">
+                    <div className="filterMain">
+                        <h2 className="saludos">Bienvenido a</h2>
+                        <h1 className="brand">Plantae</h1>
+                    </div>
                 </div>
                 <div className="aboutUs Centered">
                     <h2 className='headerMain'>¿Quiénes somos?</h2>
@@ -25,6 +28,7 @@ function Inicio() {
                     <CheapestPlant></CheapestPlant>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

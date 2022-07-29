@@ -1,0 +1,13 @@
+.SearcherContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.f{
+    margin-bottom: 12px;
+    margin-right: 5px;
+}

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function CheapestPlant() {
 
-    const [bestPlant, setBestPlant] = useState({})
+    const [bestPlant, setBestPlant] = useState({'img_ruta':'default.png'})
 
     useEffect(() => { BestOffer() }, [])
 
@@ -19,7 +19,7 @@ function CheapestPlant() {
         <div className='cardContainer Centered'>
             <h2 className='best headerMain'>Mejor Oferta!</h2>
             <div className="cardBest">
-                <div className="bestImg" style={{ backgroundImage: `url(http://localhost:8000/${bestPlant.img_ruta})` }}></div>
+                <div className="bestImg" onError={()=>(BestOffer())} style={{ backgroundImage: `url(http://localhost:8000/${bestPlant.img_ruta})` }}></div>
                 <div className="info">
                     <h3 className="nombreBest">{bestPlant.nombre}</h3>
                     <p className="nombreC">{bestPlant.nombre_cientifico}</p>

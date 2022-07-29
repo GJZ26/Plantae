@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
+import Footer from './Footer.jsx'
 
 // Importamos hoja de estilo
 import '../static/createPlant.css'
@@ -147,6 +148,7 @@ const CrearPlanta = () => {
 
                 </form>
             </div>
+            <Footer/>
         </div>
     )
 }

@@ -5,7 +5,7 @@
 
 .iconClassic{
     width: 20px;
-    margin: 10px 8px;
+    margin: 10px 6px;
 }
 
 .cardAdminContainer{
@@ -82,12 +82,14 @@
 
 .btnAdmin{
     border-radius: 50%;
-    background-color: gray;
     border: none;
     color: white;
 }
 
 .edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(62, 62, 240);
 }
 
@@ -96,6 +98,9 @@
 }
 
 .delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(245, 58, 58);
 }
 

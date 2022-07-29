@@ -17,7 +17,6 @@ export const login = (req, res) => {
                 if (error) throw error
                 if (response) {
                     req.session.user = rows[0]
-                    console.log(req.session.user)
                     res.json({
                         login: true,
                         message: 'Sesión iniciada'

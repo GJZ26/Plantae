@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
+import Footer from './Footer.jsx'
 
 import '../static/cardAdmin.css'
 
@@ -77,6 +78,7 @@ const CardAdminPlant = () => {
 
                 </div>
             ))}
+            <Footer/>
         </div>
     );
 

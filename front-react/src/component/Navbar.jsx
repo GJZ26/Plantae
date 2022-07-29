@@ -43,6 +43,7 @@ function Navbar() {
 
 
     if (Object.keys(user).length === 0) {
+        // Si no hay ningún usuario con la sesión iniciada
         return (
             <div className='Navbar'>
                 <Link to='/'><img className='logoLink' src="http://localhost:8000/logo.png" height='50px' alt="Plantae" /></Link>
@@ -53,6 +54,8 @@ function Navbar() {
                 </div>
             </div>
         )
+
+        // Si hay un administrador con la sesión iniciada
     } else if (user.priv === 'admin') {
         return (
             <div className='Navbar'>
@@ -61,6 +64,7 @@ function Navbar() {
                     <div className='nombreUser'>Hola, <b>{user.username}</b>!</div>
                 </div>
                 <div className="links">
+                    <Link to='/cart'>Carrito</Link>
                     <Link to='/admin'><div className="botonMenu">Administrar</div></Link>
                     <Link to='/admin/cart'><div className="botonMenu">Buscar Carrito</div></Link>
                     <div onClick={() => (logout())} className="botonMenu">Log Out</div>
@@ -68,6 +72,7 @@ function Navbar() {
             </div>
         )
     } else {
+        // Si hay un cliente con la sesión iniciada
         return (
             <div className='Navbar'>
                 <div className='salitos'>
@@ -75,7 +80,8 @@ function Navbar() {
                     <div className='nombreUser'>Hola, <b>{user.username}</b>!</div>
                 </div>
                 <div className="links">
-                    <Link to='/cart'><div className="botonMenu">Mi carrito</div></Link>
+                    <Link to='/cart'>Carrito</Link>
+                    <Link to='/catalogo'><div className="botonMenu">Catálogo</div></Link>
                     <div onClick={() => (logout())} className="botonMenu">Log Out</div>
                 </div>
             </div>

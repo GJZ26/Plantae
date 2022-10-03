@@ -70,7 +70,7 @@ function FormLogin() {
   useEffect(() => { isLoggin() }, [])
 
   return (
-    <div className='formLogin' onSubmit={login}>
+    <div className='formLogin'>
       <form className='login'>
         <h2 className='login'>Inicia Sesión</h2>
 
@@ -80,10 +80,10 @@ function FormLogin() {
         <label htmlFor="password">Contraseña</label>
         <input type="password" onChange={(e) => { setpasswordLog(e.target.value) }} />
 
-        <button className='primary login' type='submit'>Iniciar Sesión</button>
+        <button className='primary login' type='submit' onClick={login}>Iniciar Sesión</button>
       </form>
 
-      <form className='register' onSubmit={register}>
+      <form className='register'>
         <h2 className='register'>Crea una nueva cuenta</h2>
 
         <label htmlFor="username">Nombre de Usuario</label>
@@ -95,7 +95,7 @@ function FormLogin() {
         <label htmlFor="password">Contraseña</label>
         <input type="password" required onChange={(e) => { setpasswordReg(e.target.value) }} />
 
-        <button className='primary register' type='submit'>Registrarse</button>
+        <button className='primary register' type='submit' onClick={register}>Registrarse</button>
       </form>
     </div>
   )
